@@ -5,7 +5,7 @@ import Button from "../Button";
 
 const Banner = () => (
   <Image style={{ backgroundImage: `url(${bannerImg})` }}>
-    <div className="container">
+    <section className="container">
       <Tag size="big">Destaque do dia</Tag>
       <div>
         <Title>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Title>
@@ -21,7 +21,7 @@ const Banner = () => (
       >
         Aproveitar
       </Button>
-    </div>
+    </section>
   </Image>
 );
 
