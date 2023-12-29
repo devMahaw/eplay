@@ -93,11 +93,11 @@ const comingSoon: Game[] = [
 ];
 
 const Home = () => (
-  <>
+  <main>
     <Banner />
     <ProductsList games={sales} title="Promoções" background="gray" />
     <ProductsList games={comingSoon} title="Em Breve" background="black" />
-  </>
+  </main>
 );
 
 export default Home;

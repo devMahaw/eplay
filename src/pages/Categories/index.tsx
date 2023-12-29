@@ -92,12 +92,12 @@ const comingSoon: Game[] = [
 ];
 
 const Categories = () => (
-  <>
+  <main>
     <ProductsList games={sales} title="RPG" background="gray" />
     <ProductsList games={comingSoon} title="Ação" background="black" />
     <ProductsList games={sales} title="Aventura" background="gray" />
     <ProductsList games={comingSoon} title="FPS" background="black" />
-  </>
+  </main>
 );
 
 export default Categories;
