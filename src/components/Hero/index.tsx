@@ -5,7 +5,7 @@ import Tag from "../Tag";
 import { Banner, Infos } from "./styles";
 
 const Hero = () => (
-  <main>
+  <>
     <Banner style={{ backgroundImage: `url(${bannerImg})` }}>
       <div className="container">
         <div>
@@ -28,7 +28,7 @@ const Hero = () => (
         </Infos>
       </div>
     </Banner>
-  </main>
+  </>
 );
 
 export default Hero;

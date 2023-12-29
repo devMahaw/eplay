@@ -1,6 +1,7 @@
 import Game from "../../models/Game";
 import Product from "../Product";
-import { List, ProductsContainer, Title } from "./styles";
+import { List } from "./styles";
+import { ProductsContainer, Title } from "../Section/styles";
 
 export type Props = {
   title: string;
