@@ -8,7 +8,7 @@ export const Banner = styled.div`
   display: block;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
   padding-top: 16px;
 

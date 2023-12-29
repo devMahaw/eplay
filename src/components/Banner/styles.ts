@@ -6,10 +6,24 @@ export const Image = styled.div`
   height: 560px;
   display: block;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   font-weight: bold;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0.56;
+  }
 
   .container {
+    z-index: 1;
     position: relative;
     padding-top: 340px;
     display: flex;

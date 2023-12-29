@@ -1,5 +1,5 @@
 import { Image, Title, Prices } from "./styles";
-import bannerImg from "../../assets/images/banner-homem-aranha.png";
+import bannerImg from "../../assets/images/fundo_hogwarts.png";
 import Tag from "../Tag";
 import Button from "../Button";
 
@@ -8,10 +8,10 @@ const Banner = () => (
     <section className="container">
       <Tag size="big">Destaque do dia</Tag>
       <div>
-        <Title>Marvel&apos;s Spider-Man: Miles Morales PS4 & PS5</Title>
+        <Title>Hogwarts Legacy PS4 & PS5</Title>
         <Prices>
           De <span>R$ 250,00</span> <br />
-          por apenas R$ 99,90
+          por apenas R$ 190,00
         </Prices>
       </div>
       <Button

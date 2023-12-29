@@ -10,6 +10,7 @@ const Hero = () => (
       <div className="container">
         <div>
           <Tag>RPG</Tag>
+          <Tag>PS4</Tag>
           <Tag>PS5</Tag>
         </div>
         <Infos>
