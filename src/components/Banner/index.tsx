@@ -15,7 +15,7 @@ const Banner = () => {
   }, []);
 
   if (!game) {
-    return <h3>Carregando...</h3>;
+    return <h3>Carregando..</h3>;
   }
 
   return (
