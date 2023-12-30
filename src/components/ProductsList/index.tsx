@@ -1,4 +1,4 @@
-import Game from "../../models/Game";
+import { Game } from "../../pages/Home";
 import Product from "../Product";
 import { List } from "./styles";
 import { ProductsContainer, Title } from "../Section/styles";
@@ -9,25 +9,52 @@ export type Props = {
   games: Game[];
 };
 
-const ProductsList = ({ background, title, games }: Props) => (
-  <ProductsContainer background={background}>
-    <div className="container">
-      <Title>{title}</Title>
-      <List>
-        {games.map((game) => (
-          <Product
-            key={game.id}
-            category={game.category}
-            description={game.description}
-            image={game.image}
-            system={game.system}
-            title={game.title}
-            infos={game.infos}
-          />
-        ))}
-      </List>
-    </div>
-  </ProductsContainer>
-);
+export const formatPrice = (price = 0) => {
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+  }).format(price);
+};
+
+const ProductsList = ({ background, title, games }: Props) => {
+  const getGameTags = (game: Game) => {
+    const tags = [];
+
+    if (game.releaseDate) {
+      tags.push(game.releaseDate);
+    }
+
+    if (game.prices.discount) {
+      tags.push(`${game.prices.discount}%`);
+    }
+
+    if (game.prices.current) {
+      tags.push(formatPrice(game.prices.current));
+    }
+
+    return tags;
+  };
+
+  return (
+    <ProductsContainer background={background}>
+      <div className="container">
+        <Title>{title}</Title>
+        <List>
+          {games.map((game) => (
+            <Product
+              key={game.id}
+              category={game.details.category}
+              description={game.description}
+              image={game.media.thumbnail}
+              infos={getGameTags(game)}
+              system={game.details.system}
+              title={game.name}
+            />
+          ))}
+        </List>
+      </div>
+    </ProductsContainer>
+  );
+};
 
 export default ProductsList;
