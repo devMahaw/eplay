@@ -1,5 +1,4 @@
 import { ProductsContainer, Title } from "./styles";
-import { ReactNode } from "react";
 
 export type Props = {
   title: string;

@@ -1,18 +1,11 @@
-import { useState, useEffect } from "react";
 import { Image, Title, Prices } from "./styles";
 import Tag from "../Tag";
 import Button from "../Button";
-import { Game } from "../../pages/Home";
 import { formatPrice } from "../ProductsList";
+import { useGetFeaturedGameQuery } from "../../services/api";
 
 const Banner = () => {
-  const [game, setGame] = useState<Game>();
-
-  useEffect(() => {
-    fetch("https://fake-api-tau.vercel.app/api/eplay/destaque")
-      .then((answer) => answer.json())
-      .then((answer) => setGame(answer));
-  }, []);
+  const { data: game } = useGetFeaturedGameQuery();
 
   if (!game) {
     return <h3>Carregando...</h3>;
