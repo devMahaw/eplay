@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import RoutesVar from "./routes";
 import Footer from "./components/Footer";
 import { store } from "./store";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
         <div className="container">
           <Header />
         </div>
-        <RoutesVar />
+        <main>
+          <RoutesVar />
+          <Cart />
+        </main>
         <Footer />
       </BrowserRouter>
     </Provider>

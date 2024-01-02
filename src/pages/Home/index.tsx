@@ -38,11 +38,11 @@ const Home = () => {
 
   if (onSaleGames && soonGames) {
     return (
-      <main>
+      <>
         <Banner />
         <ProductsList games={onSaleGames} title="Promoções" background="gray" />
         <ProductsList games={soonGames} title="Em Breve" background="black" />
-      </main>
+      </>
     );
   }
 
