@@ -21,6 +21,19 @@ export const GlobalCss = createGlobalStyle`
     background-color: ${colors.black};
     color: ${colors.white};
     padding-top: 40px;
+
+    &::-webkit-scrollbar {
+    width: 12px; // Defina a largura da barra de rolagem
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${colors.lightGray}; // Cor do "pulgar" (parte que você arrasta)
+      border-radius: 6px; // Borda arredondada
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: ${colors.gray}; // Cor da "trilha" (fundo da barra de rolagem)
+    }
   }
 
   .container {

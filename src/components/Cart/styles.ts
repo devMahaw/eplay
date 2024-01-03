@@ -32,9 +32,14 @@ export const CartContainer = styled.div`
 export const Sidebar = styled.aside`
   background-color: ${colors.gray};
   z-index: 1;
-  padding: 40px 16px 0px;
-  max-width: 360px;
+  padding: 40px 16px 40px;
+  max-width: 400px;
   width: 100%;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0px; // Defina a largura da barra de rolagem
+  }
 
   ${ButtonContainer} {
     max-width: 100%;
@@ -67,14 +72,15 @@ export const CartItem = styled.li`
 
   img {
     width: 100px;
-    height: 100px;
-    object-fit: cover;
+    height: 120px;
+    object-fit: contain;
     margin-right: 24px;
   }
 
   h3 {
     color: ${colors.white};
     font-weight: bold;
+    width: 200px;
   }
 
   span {
@@ -96,5 +102,6 @@ export const CartItem = styled.li`
     position: absolute;
     top: 8;
     right: 0;
+    margin-bottom: 5500px;
   }
 `;
