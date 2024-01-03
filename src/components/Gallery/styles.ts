@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { breakpoints, colors } from "../../styles";
 
 export const Action = styled.div`
   position: absolute;
@@ -17,10 +17,15 @@ export const Action = styled.div`
 
 export const Items = styled.ul`
   display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    justify-content: center;
+  }
 `;
 
 export const Item = styled.li`
-  margin-right: 16px;
   position: relative;
 
   > img {

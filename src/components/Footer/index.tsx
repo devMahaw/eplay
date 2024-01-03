@@ -15,25 +15,19 @@ const Footer = () => (
         <FooterTitle>Categorias</FooterTitle>
         <FooterLinks>
           <li>
-            <FooterLink href="#">RPG</FooterLink>
+            <FooterLink to="/categories/#action">Ação</FooterLink>
           </li>
           <li>
-            <FooterLink href="#">Ação</FooterLink>
+            <FooterLink to="/categories/#sports">Esportes</FooterLink>
           </li>
           <li>
-            <FooterLink href="#">Aventura</FooterLink>
+            <FooterLink to="/categories/#simulation">Simulação</FooterLink>
           </li>
           <li>
-            <FooterLink href="#">Esportes</FooterLink>
+            <FooterLink to="/categories/#fighting">Luta</FooterLink>
           </li>
           <li>
-            <FooterLink href="#">Simulação</FooterLink>
-          </li>
-          <li>
-            <FooterLink href="#">Estratégia</FooterLink>
-          </li>
-          <li>
-            <FooterLink href="#">FPS</FooterLink>
+            <FooterLink to="/categories/#rpg">RPG</FooterLink>
           </li>
         </FooterLinks>
       </FooterSection>
@@ -41,13 +35,10 @@ const Footer = () => (
         <FooterTitle>Acesso rápido</FooterTitle>
         <FooterLinks>
           <li>
-            <FooterLink href="#">Novidades</FooterLink>
+            <FooterLink to="/#on-sale">Promoções</FooterLink>
           </li>
           <li>
-            <FooterLink href="#">Promoções</FooterLink>
-          </li>
-          <li>
-            <FooterLink href="#">Em breve</FooterLink>
+            <FooterLink to="/#coming-soon">Em breve</FooterLink>
           </li>
         </FooterLinks>
       </FooterSection>

@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { colors } from "../../styles";
+import { HashLink } from "react-router-hash-link";
+import { breakpoints, colors } from "../../styles";
 
 export const HeaderBar = styled.header`
   background-color: ${colors.gray};
@@ -10,16 +11,20 @@ export const HeaderBar = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  a {
-    color: ${colors.white};
-    text-decoration: none;
-    font-weight: bold;
-  }
-
   div {
     display: flex;
     align-items: center;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: none;
+  }
+`;
+
+export const HeaderLink = styled(HashLink)`
+  color: ${colors.white};
+  text-decoration: none;
+  font-weight: bold;
 `;
 
 export const Links = styled.ul`

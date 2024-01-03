@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HeaderBar, Links, LinksItem, CartButton } from "./styles";
+import { HeaderBar, Links, LinksItem, CartButton, HeaderLink } from "./styles";
 import logo from "../../assets/images/logo.svg";
 import carrinho from "../../assets/images/carrinho.svg";
 import { open } from "../../store/Reducers/cart";
@@ -25,13 +25,13 @@ const Header = () => {
         <nav>
           <Links>
             <LinksItem>
-              <Link to="/categories">Categorias</Link>
+              <HeaderLink to="/categories">Categorias</HeaderLink>
             </LinksItem>
             <LinksItem>
-              <a href="#">Novidades</a>
+              <HeaderLink to="/#on-sale">Promoções</HeaderLink>
             </LinksItem>
             <LinksItem>
-              <a href="#">Promoções</a>
+              <HeaderLink to="/#coming-soon">Em breve</HeaderLink>
             </LinksItem>
           </Links>
         </nav>
