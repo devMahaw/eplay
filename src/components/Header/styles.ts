@@ -31,8 +31,9 @@ export const LinksItem = styled.ul`
   margin-right: 16px;
 `;
 
-export const LinksCart = styled.a`
+export const CartButton = styled.a`
   display: flex;
+  cursor: pointer;
 
   img {
     margin-left: 16px;
