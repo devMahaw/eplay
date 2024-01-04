@@ -5,6 +5,7 @@ import { colors } from "../../styles";
 export const FooterContainer = styled.footer`
   background-color: ${colors.gray};
   padding: 32px 0px;
+  margin-top: 40px;
 `;
 
 export const FooterTitle = styled.h4`
