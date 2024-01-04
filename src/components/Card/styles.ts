@@ -9,7 +9,7 @@ export const CheckoutContainer = styled.div`
 
   h2,
   h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: ${colors.white};
     margin-bottom: 24px;
