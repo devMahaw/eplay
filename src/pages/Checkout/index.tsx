@@ -162,6 +162,7 @@ const Checkout = () => {
           <TabButton
             onClick={() => setPayWithCard(false)}
             isActive={!payWithCard}
+            type="button"
           >
             <img src={ticket} alt="Boleto" />
             Boleto bancário
@@ -169,6 +170,7 @@ const Checkout = () => {
           <TabButton
             onClick={() => setPayWithCard(true)}
             isActive={payWithCard}
+            type="button"
           >
             <img src={card} alt="Cartão de crédito" />
             Cartão de crédito
@@ -324,7 +326,7 @@ const Checkout = () => {
           </div>
         </>
       </Card>
-      <Button type="button" title="Clique aqui para finalizar a compra">
+      <Button type="submit" title="Clique aqui para finalizar a compra">
         Finalizar compra
       </Button>
     </form>
