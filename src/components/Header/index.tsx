@@ -35,20 +35,35 @@ const Header = () => {
             <span />
           </Hamburguer>
           <h1 style={{ height: "30px" }}>
-            <Link to="/">
+            <Link title="Clique aqui para acessar a seção principal" to="/">
               <img src={logo} alt="EPLAY" />
             </Link>
           </h1>
           <nav>
             <Links>
               <LinksItem>
-                <HeaderLink to="/categories">Categorias</HeaderLink>
+                <HeaderLink
+                  title="Clique aqui para acessar a página de categorias"
+                  to="/categories"
+                >
+                  Categorias
+                </HeaderLink>
               </LinksItem>
               <LinksItem>
-                <HeaderLink to="/#on-sale">Promoções</HeaderLink>
+                <HeaderLink
+                  title="Clique aqui para acessar a seção de promoções"
+                  to="/#on-sale"
+                >
+                  Promoções
+                </HeaderLink>
               </LinksItem>
               <LinksItem>
-                <HeaderLink to="/#coming-soon">Em breve</HeaderLink>
+                <HeaderLink
+                  title="Clique aqui para acessar a seção em breve"
+                  to="/#coming-soon"
+                >
+                  Em breve
+                </HeaderLink>
               </LinksItem>
             </Links>
           </nav>
@@ -62,13 +77,31 @@ const Header = () => {
       <NavMobile className={isMenuOpen ? "is-open" : ""}>
         <Links>
           <LinksItem>
-            <HeaderLink to="/categories">Categorias</HeaderLink>
+            <HeaderLink
+              onClick={() => setIsMenuOpen(false)}
+              title="Clique aqui para acessar a página de categorias"
+              to="/categories"
+            >
+              Categorias
+            </HeaderLink>
           </LinksItem>
           <LinksItem>
-            <HeaderLink to="/#on-sale">Promoções</HeaderLink>
+            <HeaderLink
+              onClick={() => setIsMenuOpen(false)}
+              title="Clique aqui para acessar a seção de promoções"
+              to="/#on-sale"
+            >
+              Promoções
+            </HeaderLink>
           </LinksItem>
           <LinksItem>
-            <HeaderLink to="/#coming-soon">Em breve</HeaderLink>
+            <HeaderLink
+              onClick={() => setIsMenuOpen(false)}
+              title="Clique aqui para acessar a seção em breve"
+              to="/#coming-soon"
+            >
+              Em breve
+            </HeaderLink>
           </LinksItem>
         </Links>
       </NavMobile>
