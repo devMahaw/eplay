@@ -1,7 +1,7 @@
-import { Image, Title, Prices } from "./styles";
+import * as S from "./styles";
 import Tag from "../Tag";
 import Button from "../Button";
-import { formatPrice } from "../ProductsList";
+import { formatPrice } from "../../utils";
 import { useGetFeaturedGameQuery } from "../../services/api";
 
 const Banner = () => {
@@ -12,15 +12,15 @@ const Banner = () => {
   }
 
   return (
-    <Image style={{ backgroundImage: `url(${game.media.cover})` }}>
+    <S.Image style={{ backgroundImage: `url(${game.media.cover})` }}>
       <section className="container">
         <Tag size="big">Destaque do dia</Tag>
         <div>
-          <Title>{game.name}</Title>
-          <Prices>
+          <S.Title>{game.name}</S.Title>
+          <S.Prices>
             De <span>{formatPrice(game.prices.old)}</span> <br />
             por apenas {formatPrice(game.prices.current)}
-          </Prices>
+          </S.Prices>
         </div>
         <Button
           type="link"
@@ -30,7 +30,7 @@ const Banner = () => {
           Aproveitar
         </Button>
       </section>
-    </Image>
+    </S.Image>
   );
 };
 

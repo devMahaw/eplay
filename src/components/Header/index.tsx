@@ -1,15 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  HeaderBar,
-  Links,
-  LinksItem,
-  CartButton,
-  HeaderLink,
-  Hamburguer,
-  HeaderRow,
-  NavMobile
-} from "./styles";
+import * as S from "./styles";
 import logo from "../../assets/images/logo.svg";
 import carrinho from "../../assets/images/carrinho.svg";
 import { open } from "../../store/Reducers/cart";
@@ -26,86 +17,86 @@ const Header = () => {
   };
 
   return (
-    <HeaderBar>
-      <HeaderRow>
+    <S.HeaderBar>
+      <S.HeaderRow>
         <div>
-          <Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <S.Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <span />
             <span />
             <span />
-          </Hamburguer>
+          </S.Hamburguer>
           <h1 style={{ height: "30px" }}>
             <Link title="Clique aqui para acessar a seção principal" to="/">
               <img src={logo} alt="EPLAY" />
             </Link>
           </h1>
           <nav>
-            <Links>
-              <LinksItem>
-                <HeaderLink
+            <S.Links>
+              <S.LinksItem>
+                <S.HeaderLink
                   title="Clique aqui para acessar a página de categorias"
                   to="/categories"
                 >
                   Categorias
-                </HeaderLink>
-              </LinksItem>
-              <LinksItem>
-                <HeaderLink
+                </S.HeaderLink>
+              </S.LinksItem>
+              <S.LinksItem>
+                <S.HeaderLink
                   title="Clique aqui para acessar a seção de promoções"
                   to="/#on-sale"
                 >
                   Promoções
-                </HeaderLink>
-              </LinksItem>
-              <LinksItem>
-                <HeaderLink
+                </S.HeaderLink>
+              </S.LinksItem>
+              <S.LinksItem>
+                <S.HeaderLink
                   title="Clique aqui para acessar a seção em breve"
                   to="/#coming-soon"
                 >
                   Em breve
-                </HeaderLink>
-              </LinksItem>
-            </Links>
+                </S.HeaderLink>
+              </S.LinksItem>
+            </S.Links>
           </nav>
         </div>
-        <CartButton onClick={openCart}>
+        <S.CartButton onClick={openCart}>
           {items.length}
           <span> - produto(s)</span>
           <img src={carrinho} alt="Carrinho" />
-        </CartButton>
-      </HeaderRow>
-      <NavMobile className={isMenuOpen ? "is-open" : ""}>
-        <Links>
-          <LinksItem>
-            <HeaderLink
+        </S.CartButton>
+      </S.HeaderRow>
+      <S.NavMobile className={isMenuOpen ? "is-open" : ""}>
+        <S.Links>
+          <S.LinksItem>
+            <S.HeaderLink
               onClick={() => setIsMenuOpen(false)}
               title="Clique aqui para acessar a página de categorias"
               to="/categories"
             >
               Categorias
-            </HeaderLink>
-          </LinksItem>
-          <LinksItem>
-            <HeaderLink
+            </S.HeaderLink>
+          </S.LinksItem>
+          <S.LinksItem>
+            <S.HeaderLink
               onClick={() => setIsMenuOpen(false)}
               title="Clique aqui para acessar a seção de promoções"
               to="/#on-sale"
             >
               Promoções
-            </HeaderLink>
-          </LinksItem>
-          <LinksItem>
-            <HeaderLink
+            </S.HeaderLink>
+          </S.LinksItem>
+          <S.LinksItem>
+            <S.HeaderLink
               onClick={() => setIsMenuOpen(false)}
               title="Clique aqui para acessar a seção em breve"
               to="/#coming-soon"
             >
               Em breve
-            </HeaderLink>
-          </LinksItem>
-        </Links>
-      </NavMobile>
-    </HeaderBar>
+            </S.HeaderLink>
+          </S.LinksItem>
+        </S.Links>
+      </S.NavMobile>
+    </S.HeaderBar>
   );
 };
 
