@@ -11,7 +11,7 @@ import ticket from "../../assets/images/boleto.png";
 import card from "../../assets/images/cartao.png";
 import { usePurchaseMutation } from "../../services/api";
 import { RootReducer } from "../../store";
-import { clear } from "../../store/reducers/cart";
+import { clear } from "../../store/reducers";
 import { formatPrice, getTotalPrice } from "../../utils";
 
 type Installment = {

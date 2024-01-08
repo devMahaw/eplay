@@ -3,7 +3,7 @@ import Button from "../Button";
 import { formatPrice } from "../../utils";
 import Tag from "../Tag";
 import * as S from "./styles";
-import { add, open } from "../../store/reducers/cart";
+import { add, open } from "../../store/reducers";
 
 type Props = {
   game: Game;

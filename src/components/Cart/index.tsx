@@ -4,7 +4,7 @@ import Button from "../Button";
 import * as S from "./styles";
 import Tag from "../Tag";
 import { RootReducer } from "../../store";
-import { close, remove } from "../../store/reducers/cart";
+import { close, remove } from "../../store/reducers";
 import { formatPrice, getTotalPrice } from "../../utils";
 
 const Cart = () => {
