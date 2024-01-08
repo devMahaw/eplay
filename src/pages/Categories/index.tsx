@@ -19,7 +19,7 @@ const Categories = () => {
   const { data: rpgGames, isLoading: isLoadingRpg } = useGetRpgGameQuery();
 
   return (
-    <main>
+    <>
       <ProductsList
         games={actionGames}
         title="Ação"
@@ -55,7 +55,7 @@ const Categories = () => {
         id="rpg"
         isLoading={isLoadingRpg}
       />
-    </main>
+    </>
   );
 };
 

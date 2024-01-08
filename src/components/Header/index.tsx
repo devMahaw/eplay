@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import * as S from "./styles";
 import logo from "../../assets/images/logo.svg";
 import carrinho from "../../assets/images/carrinho.svg";
-import { open } from "../../store/Reducers/cart";
+import { open } from "../../store/reducers/cart";
 import { useDispatch, useSelector } from "react-redux";
 import { RootReducer } from "../../store";
 
@@ -25,11 +25,11 @@ const Header = () => {
             <span />
             <span />
           </S.Hamburguer>
-          <h1 style={{ height: "30px" }}>
-            <Link title="Clique aqui para acessar a seção principal" to="/">
+          <Link title="Clique aqui para acessar a seção principal" to="/">
+            <h1 style={{ height: "30px" }}>
               <img src={logo} alt="EPLAY" />
-            </Link>
-          </h1>
+            </h1>
+          </Link>
           <nav>
             <S.Links>
               <S.LinksItem>
@@ -59,9 +59,8 @@ const Header = () => {
             </S.Links>
           </nav>
         </div>
-        <S.CartButton onClick={openCart}>
-          {items.length}
-          <span> - produto(s)</span>
+        <S.CartButton role="button" onClick={openCart}>
+          <span>{items.length} - produto(s)</span>
           <img src={carrinho} alt="Carrinho" />
         </S.CartButton>
       </S.HeaderRow>

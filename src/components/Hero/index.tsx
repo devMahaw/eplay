@@ -1,10 +1,9 @@
 import { useDispatch } from "react-redux";
-import { Game } from "../../pages/Home";
 import Button from "../Button";
 import { formatPrice } from "../../utils";
 import Tag from "../Tag";
 import * as S from "./styles";
-import { add, open } from "../../store/Reducers/cart";
+import { add, open } from "../../store/reducers/cart";
 
 type Props = {
   game: Game;

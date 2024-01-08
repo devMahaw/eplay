@@ -45,6 +45,14 @@ export const Sidebar = styled.aside`
     max-width: 100%;
     width: 100%;
   }
+
+  .empty-text {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 22px;
+    color: ${colors.white};
+    text-align: center;
+  }
 `;
 
 export const Prices = styled.p`

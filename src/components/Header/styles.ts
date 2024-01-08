@@ -18,6 +18,13 @@ export const HeaderBar = styled.header`
   padding: 24px;
   border-radius: 16px;
   margin-bottom: 80px;
+
+  a,
+  span {
+    font-weight: bold;
+    color: ${colors.white};
+    text-decoration: none;
+  }
 `;
 
 export const HeaderRow = styled.div`
@@ -72,7 +79,7 @@ export const LinksItem = styled.ul`
   }
 `;
 
-export const CartButton = styled.a`
+export const CartButton = styled.span`
   display: flex;
   cursor: pointer;
 
